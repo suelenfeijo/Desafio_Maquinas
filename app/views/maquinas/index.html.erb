@@ -3,6 +3,8 @@
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 
+<p><%= link_to 'Nova máquina', new_maquina_path %></p>
+
 <%= form_with(url: maquinas_path, method: :get, local: true) do |form| %>
     <div class="input-group mb-3">
       <input type="search" class="form-control" name="search" placeholder="Insira o nome ou id da máquina ">
