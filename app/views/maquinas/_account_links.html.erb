@@ -1,0 +1,10 @@
+<% if user_signed_in? %>
+  <button type="button" class="btn btn-primary btn-sm">
+    Bem vindo(a) <%= current_user.email %>
+  </button>
+  <%= button_to 'Sair', destroy_user_session_path, method: :delete, class: 'btn btn-primary' %>
+
+<% else %>
+  <%= button_to 'Login', new_user_session_path, class: 'btn btn-primary btn-sm' %>
+  <%= button_to 'Cadastro', new_user_registration_path, class: 'btn btn-primary btn-sm' %>
+<% end %>

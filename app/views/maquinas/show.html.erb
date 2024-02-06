@@ -8,6 +8,8 @@
       <ul class="list-group list-group-flush">
       <li class="list-group-item"><strong>Nome:</strong> <%= @maquina.nome %></li>
 
+      <li class="list-group-item"><strong>Criada por:</strong> <%= @maquina.user.email if @maquina.user %></li>
+
         <li class="list-group-item"><strong>Data de criação:</strong> <%= @maquina.created_at.strftime("%d/%m/%Y") %></li>
         <li class="list-group-item"><strong>Descrição:</strong> <%= @maquina.descricao %></li>
         <li class="list-group-item"><strong>Meses de garantia:</strong> <%= @maquina.meses_garantia %></li>
