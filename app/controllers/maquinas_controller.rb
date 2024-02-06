@@ -8,13 +8,20 @@ class MaquinasController < ApplicationController
   def show;end
 
   def create
+    @maquina = Maquina.new(maquina_params)
+    if @maquina.save
+      redirect to maquinas_path
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def new
-    @usuario = Usuario.new
+    @maquina = Maquina.new
   end
 
   def update
+
   end
 
   def edit
