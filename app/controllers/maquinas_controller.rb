@@ -1,5 +1,8 @@
 class MaquinasController < ApplicationController
+
+
   def index
+    @maquinas = Maquina.all
   end
 
   def show
