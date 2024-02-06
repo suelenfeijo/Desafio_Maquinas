@@ -1,11 +1,21 @@
 class MaquinasController < ApplicationController
-  before_action :set_params, only: %i[update edit destroy]
+  before_action :set_params, only: %i[ show edit update destroy set_quebrada ]
+  before_action :set_quebrada, only: [:index, :show]
 
   def index
-    @maquinas = Maquina.all
+    if params[:search].present?
+      search_query = "%#{params[:search]}%"
+      @maquinas = Maquina.where('nome LIKE :query OR id LIKE :query', query: search_query)
+      if @maquinas.empty?
+        @search_message = "ID ou nome da máquina não encontrado."
+      end
+    else
+      @maquinas = Maquina.all
+    end
   end
-
-  def show;end
+  
+  def show
+  end
 
   
   def new
@@ -15,7 +25,7 @@ class MaquinasController < ApplicationController
   def create
     @maquina = Maquina.new(maquina_params)
     if @maquina.save
-      redirect_to maquinas_path
+      redirect_to maquinas_url
     else
       render :new, status: :unprocessable_entity
     end
@@ -50,5 +60,9 @@ class MaquinasController < ApplicationController
 
   def set_params
     @maquina = Maquina.find(params[:id])
+  end
+
+  def set_quebrada
+    @quebrada = @maquina&.quebrada? ? 'quebrada' : 'não quebrada'
   end
 end

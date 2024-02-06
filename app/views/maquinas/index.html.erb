@@ -1,2 +1,47 @@
 <h1>Maquinas#index</h1>
-<p>Find me in app/views/maquinas/index.html.erb</p>
+
+
+
+<%= form_with(url: maquinas_path, method: :get, local: true) do |form| %>
+    <div class="input-group mb-3">
+      <input type="search" class="form-control" name="search" placeholder="Insira o nome ou id da máquina ">
+      <div class="input-group-append">
+        <button type="submit" class="btn btn-primary">Pesquisar</button>
+      </div>
+    </div>
+  <% end %>
+  <% if @search_message.present? %>
+  <div class="alert alert-danger"><%= @search_message %></div>
+<% end %>
+
+  
+<table class="table ">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Id</th>
+      <th>Data Criação</th>
+      <th>Ver Mais</th>
+      <th>Ações</th>
+      
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <% @maquinas.each do |maquina| %>
+      <tr>
+        <td><%= maquina.nome %></td>
+        <td><%= maquina.id %></td>  
+        <td><%= maquina.created_at.strftime("%d/%m/%Y") %></td> 
+        <td><%= link_to 'Ver mais', maquina %></td>
+        <td><%= link_to 'Deletar', maquina %></td>
+        <td><%= link_to 'Editar', maquina %></td>
+
+
+
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
