@@ -46,7 +46,8 @@ class MaquinasController < ApplicationController
   
   def destroy
     if @maquina.created_at > 30.minutes.ago
-      flash[:alert] = "Máquina não pode ser exluída antes de 30 minutos de criação."
+      time_diff = ((Time.now - @maquina.created_at) / 60).round
+    flash[:alert] = "Máquina não pode ser exluída antes de 30 minutos de criação. Faltam #{30 - time_diff} minutos para ser possível excluir."
     else
       @maquina.destroy
       flash[:notice] = "Maquina deletada com sucesso."
