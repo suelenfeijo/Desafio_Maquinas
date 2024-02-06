@@ -1,4 +1,5 @@
 class MaquinasController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_params, only: %i[ show edit update destroy set_quebrada ]
   before_action :set_quebrada, only: [:index, :show]
 
