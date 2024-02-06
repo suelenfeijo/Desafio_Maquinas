@@ -21,7 +21,11 @@ class MaquinasController < ApplicationController
   end
 
   def update
-
+    if @maquina.update(maquina_params)
+      redirect_to @maquina
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def edit
