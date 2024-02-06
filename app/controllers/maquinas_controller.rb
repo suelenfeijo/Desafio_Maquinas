@@ -24,7 +24,7 @@ class MaquinasController < ApplicationController
   end
 
   def create
-    @maquina = Maquina.new(maquina_params)
+    @maquina = current_user.maquinas.new(maquina_params)
     if @maquina.save
       redirect_to maquinas_url
     else
