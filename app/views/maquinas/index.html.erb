@@ -1,6 +1,7 @@
 <h1>Maquinas#index</h1>
 
-
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 
 <%= form_with(url: maquinas_path, method: :get, local: true) do |form| %>
     <div class="input-group mb-3">
@@ -35,8 +36,8 @@
         <td><%= maquina.id %></td>  
         <td><%= maquina.created_at.strftime("%d/%m/%Y") %></td> 
         <td><%= link_to 'Ver mais', maquina %></td>
-        <td><%= link_to 'Deletar', maquina %></td>
-        <td><%= link_to 'Editar', maquina %></td>
+        <td><%= link_to 'Delete', "maquinas/#{maquina.id}", data: { "turbo-method": :delete, 'turbo-confirm': "Tem certeza?" } %></td>
+        <td><%= link_to 'Editar', edit_maquina_path(maquina) %></td>
 
 
 

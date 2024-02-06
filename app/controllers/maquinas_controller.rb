@@ -43,17 +43,18 @@ class MaquinasController < ApplicationController
   def edit
   end
 
+  
   def destroy
     if @maquina.created_at > 30.minutes.ago
-      flash[:error] = "A máquina não pode ser removida porque foi criada há menos de 30 minutos."
+      flash[:alert] = "Máquina não pode ser exluída antes de 30 minutos de criação."
     else
       @maquina.destroy
-      flash[:notice] = "A máquina foi excluída."
+      flash[:notice] = "Maquina deletada com sucesso."
     end
     redirect_to maquinas_path
   end
-
-  def maquina_params
+  
+  def maquina_params  
     params.require(:maquina).permit(:tipo, :nome , :descricao, 
     :meses_garantia, :data_compra, :quebrada)
   end
