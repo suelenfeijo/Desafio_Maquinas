@@ -20,7 +20,7 @@ class MaquinasController < ApplicationController
 
   
   def new
-    @maquina = Maquina.new
+    @maquina = current_user.maquinas.new
   end
 
   def create
