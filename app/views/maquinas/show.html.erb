@@ -11,7 +11,7 @@
         <li class="list-group-item"><strong>Data de criação:</strong> <%= @maquina.created_at.strftime("%d/%m/%Y") %></li>
         <li class="list-group-item"><strong>Descrição:</strong> <%= @maquina.descricao %></li>
         <li class="list-group-item"><strong>Meses de garantia:</strong> <%= @maquina.meses_garantia %></li>
-        <li class="list-group-item"><strong>Data de compra:</strong> <%= @maquina.data_compra %></li>
+        <li class="list-group-item"><strong>Data de compra:</strong> <%= @maquina.data_compra.strftime("%d/%m/%Y") %></li>
         <li class="list-group-item"><strong>Quebrada:</strong> <%= @quebrada %></li>
       </ul>
     </div>

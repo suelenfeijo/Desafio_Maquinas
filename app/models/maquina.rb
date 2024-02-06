@@ -1,7 +1,7 @@
 class Maquina < ApplicationRecord
     require 'Date'
 
-  validates :nome, presence: { allow_blank: false, message: 'nome não pode ser nulo' }, length: { minimum: 2 ,  maximum: 80, message: 'Nome deve ter ter entre 2 a 80 caracters'}
+  validates :nome, presence: { allow_blank: false, message: 'nome não pode ser nulo' }, length: { minimum: 2 ,  maximum: 80, message: 'deve ter ter entre 2 a 80 caracters'}
 
   validates :descricao, presence: { allow_blank: false, message: 'descrição não pode ser nulo' }, length: { maximum: 1000 , message: 'Tamanho máximo de 1000 caracters'}
 
