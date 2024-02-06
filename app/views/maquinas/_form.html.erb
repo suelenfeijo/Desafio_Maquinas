@@ -37,11 +37,11 @@
     
     <div>
     <%= form.label :data_compra %>
-    <%= form.text_field :data_compra %>
+    <%= form.date_select :data_compra, order: [:day, :month, :year] %>
     <% maquina.errors.full_messages_for(:data_compra).each do |message| %>
-        <div><p><%= message %></p></div>    
-    <%end%>
-    </div>
+      <div><p><%= message %></p></div>
+    <% end %>
+  </div>
 
     <div>
     <%= form.label :quebrada%>
