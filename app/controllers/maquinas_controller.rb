@@ -31,6 +31,8 @@ class MaquinasController < ApplicationController
   end
 
   def maquina_params
+    params.require(:maquina).permit(:tipo, :nome , :descricao, 
+    :meses_garantia, :data_compra, :quebrada)
   end
 
   def set_params
