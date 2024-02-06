@@ -1,5 +1,5 @@
 class MaquinasController < ApplicationController
-  before_action :set_params, only: i%[update edit destroy]
+  before_action :set_params, only: %i[update edit destroy]
 
   def index
     @maquinas = Maquina.all
