@@ -1,24 +1,21 @@
 <h1>Maquinas#show</h1>
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <div class="card">
+      <div class="card-header">
+   
+      </div>
+      <ul class="list-group list-group-flush">
+      <li class="list-group-item"><strong>Nome:</strong> <%= @maquina.nome %></li>
 
+        <li class="list-group-item"><strong>Data de criação:</strong> <%= @maquina.created_at.strftime("%d/%m/%Y") %></li>
+        <li class="list-group-item"><strong>Descrição:</strong> <%= @maquina.descricao %></li>
+        <li class="list-group-item"><strong>Meses de garantia:</strong> <%= @maquina.meses_garantia %></li>
+        <li class="list-group-item"><strong>Data de compra:</strong> <%= @maquina.data_compra %></li>
+        <li class="list-group-item"><strong>Quebrada:</strong> <%= @quebrada %></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-<h1><%= @maquina.nome  %></h1>
-
-
-<p> <%= @maquina.tipo %> </p>
-
-<p> <%= @maquina.descricao %> </p>
-
-<p> <%= @maquina.meses_garantia %> </p>
-
-<p> <%= @maquina.data_compra %> </p>
-
-<p> <%= @quebrada %> </p>
-
-
-
-
-
-
-<p> <%= @maquina.created_at %> </p>
-
-
+<p><%= link_to 'Listagem máquinas', maquinas_path %></p>

@@ -21,8 +21,8 @@
 <table class="table ">
   <thead>
     <tr>
-      <th>Nome</th>
       <th>Id</th>
+      <th>Nome</th>
       <th>Data Criação</th>
       <th>Ver Mais</th>
       <th>Ações</th>
@@ -34,8 +34,8 @@
   <tbody>
     <% @maquinas.each do |maquina| %>
       <tr>
-        <td><%= maquina.nome %></td>
-        <td><%= maquina.id %></td>  
+        <td><%= maquina.id %></td>
+        <td><%= maquina.nome %></td>  
         <td><%= maquina.created_at.strftime("%d/%m/%Y") %></td> 
         <td><%= link_to 'Ver mais', maquina %></td>
         <td><%= link_to 'Delete', "maquinas/#{maquina.id}", data: { "turbo-method": :delete, 'turbo-confirm': "Tem certeza?" } %></td>
