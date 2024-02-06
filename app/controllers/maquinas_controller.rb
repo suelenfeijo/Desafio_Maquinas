@@ -1,5 +1,5 @@
 class MaquinasController < ApplicationController
-
+  before_action :set_params, only: i%[update edit destroy]
 
   def index
     @maquinas = Maquina.all
@@ -32,7 +32,13 @@ class MaquinasController < ApplicationController
   end
 
   def destroy
-    @maquina.destroy
+    if
+      @maquina.created_at > 30.minutes.ago
+       flash[:error] = "A máquina não pode ser removida porque foi criada há menos de 30 minutos."
+    else
+      @maquina.destroy
+      flash[:notice] = "A máquina foi excluída."
+    end
     redirect_to maquinas_path
   end
 
