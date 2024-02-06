@@ -5,13 +5,13 @@ class MaquinasController < ApplicationController
     @maquinas = Maquina.all
   end
 
-  def show
-  end
+  def show;end
 
   def create
   end
 
   def new
+    @usuario = Usuario.new
   end
 
   def update
