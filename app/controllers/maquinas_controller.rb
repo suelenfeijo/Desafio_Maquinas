@@ -36,5 +36,6 @@ class MaquinasController < ApplicationController
   end
 
   def set_params
+    @maquina = Maquina.find(params[:id])
   end
 end
