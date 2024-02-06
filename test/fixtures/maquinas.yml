@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipo: MyString
+  nome: MyString
+  descricao: MyText
+  meses_garantia: 1
+  data_compra: 2024-02-06
+  quebrada: false
+
+two:
+  tipo: MyString
+  nome: MyString
+  descricao: MyText
+  meses_garantia: 1
+  data_compra: 2024-02-06
+  quebrada: false
