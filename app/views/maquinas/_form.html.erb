@@ -13,7 +13,7 @@
     <div>
         <%= form.label :tipo %>
         <%= form.text_field :tipo %>
-        <% maquina.errors.full_messages_for(:nome).each do |message| %>
+        <% maquina.errors.full_messages_for(:tipo).each do |message| %>
             <div><p><%= message %></p></div>    
         <%end%>
     </div>
@@ -21,7 +21,7 @@
     <div>
     <%= form.label :descricao %>
     <%= form.text_field :descricao %>
-    <% maquina.errors.full_messages_for(:nome).each do |message| %>
+    <% maquina.errors.full_messages_for(:descricao).each do |message| %>
         <div><p><%= message %></p></div>    
     <%end%>
     </div>
@@ -29,31 +29,25 @@
     <div>
     <%= form.label :meses_garantia %>
     <%= form.text_field :meses_garantia %>
-    <% maquina.errors.full_messages_for(:nome).each do |message| %>
+    <% maquina.errors.full_messages_for(:meses_garantia).each do |message| %>
         <div><p><%= message %></p></div>    
     <%end%>
     </div>
 
+    
     <div>
     <%= form.label :data_compra %>
     <%= form.text_field :data_compra %>
-    <% maquina.errors.full_messages_for(:nome).each do |message| %>
+    <% maquina.errors.full_messages_for(:data_compra).each do |message| %>
         <div><p><%= message %></p></div>    
     <%end%>
     </div>
 
     <div>
-    <%= form.label :data_compra %>
-    <%= form.text_field :data_compra %>
-    <% maquina.errors.full_messages_for(:nome).each do |message| %>
-        <div><p><%= message %></p></div>    
-    <%end%>
-    </div>
-
-    <div>
-    <%= form.label :quebrada %>
-    <%= form.text_field :quebrada %>
-    <% maquina.errors.full_messages_for(:nome).each do |message| %>
+    <%= form.label :quebrada%>
+    <%= form.check_box :quebrada %> Marque a opção para sim
+   
+    <% maquina.errors.full_messages_for(:quebrada).each do |message| %>
         <div><p><%= message %></p></div>    
     <%end%>
     </div>

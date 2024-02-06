@@ -7,18 +7,20 @@ class MaquinasController < ApplicationController
 
   def show;end
 
+  
+  def new
+    @maquina = Maquina.new
+  end
+
   def create
     @maquina = Maquina.new(maquina_params)
     if @maquina.save
-      redirect to maquinas_path
+      redirect_to maquinas_path
     else
       render :new, status: :unprocessable_entity
     end
   end
 
-  def new
-    @maquina = Maquina.new
-  end
 
   def update
     if @maquina.update(maquina_params)
@@ -32,9 +34,8 @@ class MaquinasController < ApplicationController
   end
 
   def destroy
-    if
-      @maquina.created_at > 30.minutes.ago
-       flash[:error] = "A máquina não pode ser removida porque foi criada há menos de 30 minutos."
+    if @maquina.created_at > 30.minutes.ago
+      flash[:error] = "A máquina não pode ser removida porque foi criada há menos de 30 minutos."
     else
       @maquina.destroy
       flash[:notice] = "A máquina foi excluída."
