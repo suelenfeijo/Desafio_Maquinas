@@ -1,24 +1,25 @@
-# README
+# Desafio_Maquinas
+Desafio Máquinas utilizando o framework Ruby on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Criar um projeto, utilizando o framework Ruby on Rails, que cumpra com os requisitos listados abaixo. O projeto deve ser autoral, ou seja, você deve começar com o projeto padrão do Rails (rails new nome_do_projeto). Você pode utilizar os geradores de scaffold do rails, e pode utilizar quaisquer gems existentes pra cumprir os requisitos abaixo.**
 
-Things you may want to cover:
+- Criar site para gerenciamento de Máquinas.
 
-* Ruby version
+- O usuário que acessa o sistema deve poder listar, criar, modificar ou apagar máquinas.
 
-* System dependencies
+- Uma máquina deve ter os campos: tipo (string), nome(string), descrição(texto), meses de garantia(int), data da compra (date), e quebrada (boolean)
 
-* Configuration
+- Validações devem garantir que nomes tenham entre 2 e 80 caracteres, descrições tenham até 1000 caracteres, data de compra seja uma data no passado e meses de garantia seja um número inteiro.
 
-* Database creation
+- Uma máquina não pode ser removida se ela foi criada há mais de 30 minutos.
 
-* Database initialization
+- O projeto finalizado deve ser carregado no github do usuário, para envio.
 
-* How to run the test suite
+Obs: o projeto não precisa de autenticação.
 
-* Services (job queues, cache servers, search engines, etc.)
+Extras, opcionais, mas que darão um plus no projeto:
 
-* Deployment instructions
+- Faça o projeto ficar bonito.
+- Faça o projeto ter autenticação, para apenas usuários logados criarem máquinas.
+- Identifique o usuário que criou a máquina.
 
-* ...
