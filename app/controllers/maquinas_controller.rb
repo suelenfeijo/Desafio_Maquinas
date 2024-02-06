@@ -32,6 +32,8 @@ class MaquinasController < ApplicationController
   end
 
   def destroy
+    @maquina.destroy
+    redirect_to maquinas_path
   end
 
   def maquina_params
