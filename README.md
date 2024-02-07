@@ -26,4 +26,4 @@ Extras, opcionais, mas que darão um plus no projeto:
 
 ##Desafio concluído:
 
-<iframe width="560" height="315" src="https://www.awesomescreenshot.com/video/24726128?key=9dcba311a429606ef2441c6f212ef90f" title="Desafio concluído" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<a href="https://www.awesomescreenshot.com/video/24726128?key=9dcba311a429606ef2441c6f212ef90f" target="_blank">Desafio concluído</a>
