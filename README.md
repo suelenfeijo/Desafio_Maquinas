@@ -41,6 +41,15 @@ também foi adicionado ao projeto os extras sugeridos:
 - Faça o projeto ter autenticação, para apenas usuários logados criarem máquinas.
 - Identifique o usuário que criou a máquina.
 
+Tecnologias utilizadas:
+
+- Ruby On Rails.
+- Banco de dados SQLite.
+- Letter Opener para confirmação de email em ambiente de desenvolvimento.
+- Gem Devise para autenticação de usuário.
+- Html e css para construção do frontend.
+- Versionamento de código com git e github. 
+
 ### Resumo de experiência
 
 "Este projeto me deu a oportunidade de explorar um pouco mais a grandeza da programação e conhecer a linguagem Ruby junto ao framework Ruby on Rails. Isso despertou meu interesse em aprender mais sobre o ecossistema de Ruby e a própria linguagem.
