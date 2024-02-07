@@ -4,8 +4,8 @@
     margin: auto;
     display: flex;
     flex-direction: column;
-    background:rgb(216, 220, 213); 
-    box-shadow: 1px 0px 1.2px 0px #e3e3e3; 
+    background:rgb(255, 255, 255); 
+    box-shadow: 1px 0px 6px 0px #595959; 
     border-radius:5rem; 
     padding:1em;
 }
@@ -26,3 +26,18 @@ font-size: 25px;
 
 }.list-group-item{
 font-size: 28px;}
+
+
+.link-form{
+    text-decoration: none;
+    color: #f4f4f4;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    top: 2rem;
+    margin-left: 15rem;
+    margin-right: 1rem;
+    background-color:  #05b55a;
+    border-radius: 2rem;
+    padding: 1rem 24rem;
+}

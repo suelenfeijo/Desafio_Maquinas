@@ -1,0 +1,41 @@
+body{
+    background: rgb(255, 255, 255);
+    width: auto;
+}.acesso{
+    text-decoration: none;
+    color: #002509;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    top: 12rem;
+    margin-left: 11rem;
+    background-color:  #05b55a;
+    border-radius: 2rem;
+    padding: 1rem 24rem;
+}.h1 {
+        position: relative;
+        overflow: hidden; /* hide any text that goes beyond the element's boundaries */
+        white-space: nowrap; /* prevent text from wrapping to the next line */
+        border-right: 2px solid; /* add a border to the right of the element */
+        animation: typing 3s steps(40, end), blinking-caret 5s step-end infinite;
+      }
+    
+      /* define the keyframes for the typing animation */
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+    
+      /* define the keyframes for the blinking caret animation */
+      @keyframes blinking-caret {
+        from, to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: black;
+        }
+      }

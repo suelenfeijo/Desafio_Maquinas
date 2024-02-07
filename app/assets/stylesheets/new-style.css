@@ -89,6 +89,7 @@ select {
     background-color: #002c15;
     color: white;
     margin-top: 3rem; 
+    cursor: pointer;
 
 }.error{
     background: #002c154f;
@@ -98,15 +99,5 @@ select {
     color: black;
     border-radius: 8px;
 
-}.link-form{
-    text-decoration: none;
-    color: #002c15;
-    font-size: 18px;
-    font-weight: 600;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem; 
 }
-
 
