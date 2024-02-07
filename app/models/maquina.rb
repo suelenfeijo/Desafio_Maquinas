@@ -1,5 +1,6 @@
 class Maquina < ApplicationRecord
     require 'Date'
+
     belongs_to :user
   validates :nome, presence: { allow_blank: false, message: 'nome não pode ser nulo' }, length: { minimum: 2 ,  maximum: 80, message: 'deve ter ter entre 2 a 80 caracters'}
 
@@ -16,6 +17,10 @@ class Maquina < ApplicationRecord
     if data_compra.present? && data_compra > Date.today
       errors.add(:data_compra, "data de compra não pode ser no futuro")
     end
+  end
+
+  def created_at_sao_paulo
+    created_at.in_time_zone('America/Sao_Paulo')
   end
 
 end

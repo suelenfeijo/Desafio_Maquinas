@@ -1,0 +1,22 @@
+.maquina-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .maquina-table th,
+  .maquina-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .maquina-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .maquina-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }

@@ -7,11 +7,13 @@ class MaquinasController < ApplicationController
     if params[:search].present?
       search_query = "%#{params[:search]}%"
       @maquinas = Maquina.where('nome LIKE :query OR id LIKE :query', query: search_query)
+
       if @maquinas.empty?
         @search_message = "ID ou nome da máquina não encontrado."
       end
     else
       @maquinas = Maquina.all
+
     end
   end
   

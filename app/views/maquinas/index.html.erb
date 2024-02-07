@@ -1,12 +1,17 @@
-<h1>Maquinas#index</h1>
 
-<%= render 'account_links' %>
+<h1>Maquinas</h1>
+
+<div class="account-links">
+  <%= render 'account_links' %>
+</div>
+
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 
 <p><%= link_to 'Nova máquina', new_maquina_path %></p>
 
-<%= form_with(url: maquinas_path, method: :get, local: true) do |form| %>
+<div class="search-form">
+  <%= form_with(url: maquinas_path, method: :get, local: true) do |form| %>
     <div class="input-group mb-3">
       <input type="search" class="form-control" name="search" placeholder="Insira o nome ou id da máquina ">
       <div class="input-group-append">
@@ -14,12 +19,13 @@
       </div>
     </div>
   <% end %>
-  <% if @search_message.present? %>
-  <div class="alert alert-danger"><%= @search_message %></div>
+</div>
+
+<% if @search_message.present? %>
+  <div class="search-message alert alert-danger"><%= @search_message %></div>
 <% end %>
 
-  
-<table class="table ">
+<table class="table maquina-table">
   <thead>
     <tr>
       <th>Id</th>
@@ -27,9 +33,6 @@
       <th>Data Criação</th>
       <th>Ver Mais</th>
       <th>Ações</th>
-      
-
-
     </tr>
   </thead>
   <tbody>
@@ -37,18 +40,13 @@
       <tr>
         <td><%= maquina.id %></td>
         <td><%= maquina.nome %></td>  
-        <td><%= maquina.created_at.strftime("%d/%m/%Y") %></td> 
+        <td><%= maquina.created_at_sao_paulo.strftime("%d/%m/%Y") %></td> 
         <td><%= link_to 'Ver mais', maquina %></td>
         <td><%= link_to 'Delete', "maquinas/#{maquina.id}", data: { "turbo-method": :delete, 'turbo-confirm': "Tem certeza?" } %></td>
         <td><%= link_to 'Editar', edit_maquina_path(maquina) %></td>
-
-
-
-
       </tr>
     <% end %>
   </tbody>
 </table>
-
 
 <p><%= link_to 'Página principal', root_path %></p>
