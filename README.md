@@ -25,6 +25,7 @@ Extras, opcionais, mas que darão um plus no projeto:
 ---------------------------------------------------------------------------------------------------------------------------
 
 ## Desafio concluído:
+[Código de exemplo em ação](https://www.awesomescreenshot.com/video/24726128)
 
 <img src="DesafioMaquinas.gif" alt="Desafio concluído"></img>
 
