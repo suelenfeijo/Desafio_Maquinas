@@ -1,0 +1,30 @@
+nav {
+  margin: -10px auto 0;
+
+  position: relative;
+  width: auto;
+  height: 80px;
+  background-color:  #05b55a;
+
+  border-radius: 8px;
+  font-size: 0;
+}
+nav p {
+  height: 0;
+  font-weight: 600;
+  font-size: 18px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  margin: 20px 4rem;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}a{
+  text-decoration: none;  
+}.to_link{
+  text-decoration: none;
+  color: #ffffff;
+
+}

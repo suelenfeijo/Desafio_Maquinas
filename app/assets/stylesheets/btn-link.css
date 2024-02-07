@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+.btn-link{
+    background: none;
+    border: none;
+    font-weight: 600;
+    font-size: 18px;
+}.logado{
+    position: relative;
+    bottom: 0rem;
+    left: 7rem;
+    color: rgb(255, 255, 255);
+
+}.sair{
+    position: relative;
+    bottom: 1.2rem;
+    left: 45rem;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+
+}
