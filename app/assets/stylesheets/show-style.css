@@ -1,0 +1,28 @@
+.lista{
+    width: 60%;
+    
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background:rgb(216, 220, 213); 
+    box-shadow: 1px 0px 1.2px 0px #e3e3e3; 
+    border-radius:5rem; 
+    padding:1em;
+}
+
+
+
+.list-group-ul {
+    list-style-type: none;
+
+}.list-group-item{
+width: 90%;
+margin: 0 auto;
+margin-bottom: 20px;
+position: relative;
+
+}.list-group-item strong{
+font-size: 25px;
+
+}.list-group-item{
+font-size: 28px;}

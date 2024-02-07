@@ -19,4 +19,14 @@
     text-align: left;
     background:  #05b55a;
     color: white;
+  }.button-index{
+    padding: .5rem 2.5rem;
+    border-radius: 3rem;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color:  #003415;
+    color: white;
+    margin: 2rem 0;
   }

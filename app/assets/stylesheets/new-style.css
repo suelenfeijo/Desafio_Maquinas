@@ -25,7 +25,7 @@
 }
 
 
-.form_input {
+.form_input,.form-control {
     font-size: 16px;
     font-family: inherit;
     padding: 8px 15px;
@@ -82,13 +82,13 @@ select {
          top: 3px;
          left: 4px;
 }.btn-form{
-    padding: .5rem 2.5rem;
+   padding: .5rem 2.5rem;
     border-radius: 3rem;
     font-size: 18px;
     font-weight: 600;
     background-color: #002c15;
     color: white;
-    margin-top: 3rem;
+    margin-top: 3rem; 
 
 }.error{
     background: #002c154f;
